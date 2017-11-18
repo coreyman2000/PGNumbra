@@ -62,6 +62,12 @@ def parse_args():
     parser.add_argument('-t', '--threads', type=int, default=4,
                         help="Number of parallel threads to check accounts with shadowcheck.py.")
 
+    parser.add_argument('-pgpmin', '--pgpool-min-level', type=int, default=1,
+                        help="shadowcheck.py: Minimum level of account to request from pgpool")
+
+    parser.add_argument('-pgpmax', '--pgpool-max-level', type=int, default=40,
+                        help="shadowcheck.py: Maximum level of account to request from pgpool")
+
     parser.add_argument('-pgpu', '--pgpool-url',
                         help='Address of PGPool to load accounts from and/or update their details.')
 
