@@ -38,5 +38,5 @@ class CSVAccProvider(AccProvider):
 
     def finish(self):
         self.done = True
-        log.info("Finished providing accounts. Provided {} of {} accounts in total.".format(self.num_provided, cfg_get(
-            'pgpool_num_accounts')))
+        log.info("Finished providing accounts. Provided {} of {} accounts in total.".format(self.num_provided,
+                                                                                            len(self.accounts)))
