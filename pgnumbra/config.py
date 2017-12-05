@@ -113,6 +113,10 @@ def cfg_init(shadowcheck=False):
         args.include_nearby = True
         mrmime_cfg['pgpool_auto_update'] = False
 
+    if cfg_get('pgpool_min_level') > 1 or cfg_get('pgpool_max_level') < 40:
+        log.info("Only checking accounts with trainer level {} to {}.".format(cfg_get('pgpool_min_level'),
+                                                                              cfg_get('pgpool_max_level')))
+
     if cfg_get('max_good'):
         log.info("Stopping after {} GOOD accounts.".format(cfg_get('max_good')))
 
