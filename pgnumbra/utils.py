@@ -70,6 +70,8 @@ def pgpool_load_accounts(num):
     request = {
         'system_id': get_pgpool_system_id(),
         'count': num,
+        'min_level': cfg_get('pgpool_min_level'),
+        'max_level': cfg_get('pgpool_max_level'),
         'banned_or_new': True
     }
 
