@@ -1,4 +1,4 @@
-git+https://github.com/michikrug/pgoapi.git@proto-update#egg=pgoapi
+git+https://github.com/michikrug/pgoapi.git@update-ptc-login#egg=pgoapi
 git+https://github.com/sLoPPydrive/MrMime.git#egg=MrMime
 requests
 geopy
